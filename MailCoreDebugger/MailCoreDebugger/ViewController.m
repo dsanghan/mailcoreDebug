@@ -16,6 +16,8 @@
 
 @property (nonatomic, weak) IBOutlet WebView *webview;
 
+@property (nonatomic, readwrite, strong) NSString *displayedPath;
+
 @end
 
 @implementation ViewController
@@ -31,7 +33,7 @@
     [[NSUserDefaults standardUserDefaults] synchronize];
 
     // Do any additional setup after loading the view.
-    [self loadMessageForTag:1];
+    [self loadMessageForTag:0];
 }
 
 - (void)setRepresentedObject:(id)representedObject {
@@ -43,10 +45,15 @@
 - (void)loadMessageForTag:(NSInteger)tag {
     NSString *message = [NSString stringWithFormat:@"message%lu", tag];
     NSString *path = [[NSBundle mainBundle] pathForResource:message ofType:@"eml"];
+    _displayedPath = path;
     NSData *data = [NSData dataWithContentsOfFile:path];
     MCOMessageParser *parser = [MCOMessageParser messageParserWithData:data];
     NSString *html = [parser htmlRenderingWithDelegate:nil];
     [[_webview mainFrame] loadHTMLString:html baseURL:nil];
+}
+
+- (IBAction)openWithDefaultEMLApp:(id)sender {
+    [[NSWorkspace sharedWorkspace] openFile:_displayedPath];
 }
 
 @end

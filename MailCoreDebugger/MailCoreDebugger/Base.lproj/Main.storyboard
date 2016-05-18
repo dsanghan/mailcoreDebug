@@ -710,14 +710,26 @@
                                     <action selector="didPressMessageButton:" target="XfG-lQ-9wD" id="4xd-YD-aaF"/>
                                 </connections>
                             </button>
+                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="czA-zP-Uh6">
+                                <rect key="frame" x="662" y="566" width="128" height="19"/>
+                                <buttonCell key="cell" type="roundRect" title="Open in Default App" bezelStyle="roundedRect" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="JHT-2g-nbh">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="cellTitle"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="openWithDefaultEMLApp:" target="XfG-lQ-9wD" id="PKb-ac-zru"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <constraints>
                             <constraint firstItem="jx5-Wf-s7v" firstAttribute="leading" secondItem="dIc-sY-suz" secondAttribute="trailing" constant="5" id="0qQ-7c-LOB"/>
+                            <constraint firstItem="czA-zP-Uh6" firstAttribute="centerY" secondItem="jx5-Wf-s7v" secondAttribute="centerY" id="5Kh-8e-1bx"/>
                             <constraint firstItem="y40-wN-LSI" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="60" id="IAw-6W-glt"/>
                             <constraint firstItem="jx5-Wf-s7v" firstAttribute="centerY" secondItem="dIc-sY-suz" secondAttribute="centerY" id="U0Y-5u-Pq5"/>
                             <constraint firstAttribute="bottom" secondItem="y40-wN-LSI" secondAttribute="bottom" constant="10" id="Y8T-PZ-Cl8"/>
                             <constraint firstItem="GYz-AM-YJ0" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="10" id="eAs-kG-UTa"/>
                             <constraint firstItem="GYz-AM-YJ0" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="15" id="fXd-o2-pjC"/>
+                            <constraint firstAttribute="trailing" secondItem="czA-zP-Uh6" secondAttribute="trailing" constant="10" id="h41-2F-Xpj"/>
                             <constraint firstItem="dIc-sY-suz" firstAttribute="centerY" secondItem="GYz-AM-YJ0" secondAttribute="centerY" id="oPp-rN-gop"/>
                             <constraint firstItem="y40-wN-LSI" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="10" id="qGI-hO-743"/>
                             <constraint firstItem="dIc-sY-suz" firstAttribute="leading" secondItem="GYz-AM-YJ0" secondAttribute="trailing" constant="5" id="whB-r1-baW"/>
