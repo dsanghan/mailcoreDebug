@@ -1,0 +1,1631 @@
+Delivered-To: devsanghani@gmail.com
+Received: by 10.55.118.2 with SMTP id r2csp2011870qkc;
+        Tue, 10 May 2016 05:07:27 -0700 (PDT)
+X-Received: by 10.157.4.53 with SMTP id 50mr2589355otc.195.1462882047550;
+        Tue, 10 May 2016 05:07:27 -0700 (PDT)
+Return-Path: <bounce-mc.us6_13353299.16617-dev_sanghani=yahoo.com@mail211.suw16.rsgsv.net>
+Received: from nm8-vm5.bullet.mail.sg3.yahoo.com (nm8-vm5.bullet.mail.sg3.yahoo.com. [106.10.148.196])
+        by mx.google.com with ESMTPS id b93si632792otc.178.2016.05.10.05.07.26
+        for <devsanghani@gmail.com>
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Tue, 10 May 2016 05:07:27 -0700 (PDT)
+Received-SPF: neutral (google.com: 106.10.148.196 is neither permitted nor denied by domain of bounce-mc.us6_13353299.16617-dev_sanghani=yahoo.com@mail211.suw16.rsgsv.net) client-ip=106.10.148.196;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@mail211.suw16.rsgsv.net;
+       dkim=neutral (bad format) header.i=@fbl.mcsv.net;
+       spf=neutral (google.com: 106.10.148.196 is neither permitted nor denied by domain of bounce-mc.us6_13353299.16617-dev_sanghani=yahoo.com@mail211.suw16.rsgsv.net) smtp.mailfrom=bounce-mc.us6_13353299.16617-dev_sanghani=yahoo.com@mail211.suw16.rsgsv.net
+Received: from [106.10.166.122] by nm8.bullet.mail.sg3.yahoo.com with NNFMP; 10 May 2016 12:07:25 -0000
+Received: from [106.10.151.155] by tm11.bullet.mail.sg3.yahoo.com with NNFMP; 10 May 2016 12:07:25 -0000
+Received: from [127.0.0.1] by omp1009.mail.sg3.yahoo.com with NNFMP; 10 May 2016 12:07:25 -0000
+X-Yahoo-Newman-Property: ymail-3
+X-Yahoo-Newman-Id: 180598.86450.bm@omp1009.mail.sg3.yahoo.com
+Received: from deli600015.mail.sg3.yahoo.com by sendmailws108.mail.sg3.yahoo.com; Tue, 10 May 2016 12:07:24 +0000; 1462882044.467
+X-Apparently-To: dev_sanghani@yahoo.com; Tue, 10 May 2016 12:07:23 +0000
+Return-Path: <bounce-mc.us6_13353299.16617-dev_sanghani=yahoo.com@mail211.suw16.rsgsv.net>
+Received-SPF: pass (domain of mail211.suw16.rsgsv.net designates 198.2.182.211 as permitted sender)
+X-YMailISG: iEojQ7UWLDuI0VB4AscIEVL4BlwQu8jIUs6O6YuGCVuZp8NN
+ 0z88YqOF5eJkOHlWl_fUz86M4QH_EiP7XgvPNJOm1oJgo5MMeM2zTgZtIJQz
+ 237vt8rWjTxdPskXih8RP6PaFnooMtOjy0QQMlTRnlzYqiBD8bLPeVgoewU5
+ eENMq2NWTMFwsUzJ3ckGOoU3_fLMapD2CdafxwD2xr2X8PZZV1O9LCHjG19c
+ yX2J.7wh3CUZxcDv4ERg8UrYSjHj.02sSrb_DHbFwPcsVvpA2s4bVzMadgHL
+ z7F5wUD7KZJiuewBWaRgCwc.cjWhHLKO9FigftOCnTWj2TrgbWKuvhIJv62F
+ dNaWQ45KlQc_F_Yr0wLrKfZZx.Z4CZARoI5dXTY9Vfpw6ctQJfN.b_WswTyA
+ 9rfEn6Uuj0m3hYkq7OzuZ7mi.bFUGgg84MXPOJq8oJLOdbQmIHZ6fG8tLTRY
+ DJvgNhdBDktsX0iFfzrsc9hZMMzboVbVZJUDKgWm6gKSUu.KX6Af47ia0RyW
+ ravlb4T0kTLJBO9r3n0xGm2Onvunwl263JT6jRrtzwzhlud.CA5KCzr73484
+ ZCxsI0.ydGDZdQezOd6dgQmBZ2G7GanC.4i4IVheOGWFLNh4QMTeU0mVsdAR
+ wvFEJk50RWd8BphgcpLsXh39dBCsdwCvwqCXbkMmZsXsSlHSeeXkpw.Se19I
+ uNygSc.ndSajXT3qtfwBHYEE1lEGZvkk6sqqt9kzKi.7OE4i7MMYz_8KUJ7n
+ SlzFWyDVkTQgT2FXr52kTOEh3lXy1org9rsRL.ZgbHEJdWX5j2455Xp10RWf
+ hYNIzy..ikFF0POORACyxRQOJfpRXBvS3zYmVN6HW0kfw6FwFIl3cmwpbdIj
+ o8WG36E04GoWAsLREwLx1b1xXs.nxY75P2JWemZcNc9mceKE3.61u9Lk2oKA
+ Cpipj0dqq42mr5HKvZI5vx8grPW5XPS9AsjRUb_K0ePDsrmA0pnXVBt0tuFo
+ JRz9i2GRGXDG3UWP7h5IL42IQWvMlazYaiuBOYl.woHTedoWSzuk5pTKEC2u
+ PxRnGfsno9PaDBJdzLOlJq6OIAiy8jDtWPM2gTkHycGJB9wHEs4kfjdph82c
+ jfnRojHt74DTj.EX8Ym5UtHfumC7w3IrwsRiVpJ_HL6zygt5Ahq3hGC3m8UR
+ XA3faWXpmp9Y.TAmOpQHRHeIC43uvldbOoSeU7EYdTxwQxq8WMbWD.cVtARx
+ G3UBdeOdeFHJb7_acfI7pEYAg9IAZJmI7seCZeUZ_9foUbaSjW6YEat6ax6Q
+ EB47TYS2DGG6vvFhvYKZs9HmNawx1__yriJZmd1yT80W5HPyaGOi8CWCTqc_
+ Ax0jM2bfkeo4EY13oDGIYcKAY.wVP.mJB5j4qAo673qTgpjRWGNFB4EJe64c
+ DcvJWkZW6OjB1.P9hJLLCYplkcoRFodgzaRkSq6u9AizEConV.tVcgGTT4Fq
+ 5fWPW9HBf.cZYlRMevq.Mx_TFQRVikZr1vZxX6HI3qqfk4X3XCnn_SHhqca6
+ QKvophDubVQp9DhADC_8R002KqoDEkJxe42.619I_sRequUeLGPTluKKlHtH
+ Jp47c6p7H7rHDALBoiFf.Tlapi7PSemWqMzO3bTTNxdD7Q1.XaOiUNyf2VvN
+ OFstHzc4RQBwfq_KOE7M1Z0CAFHcV1N6xM5EGMAAAS1NLy7pDdXcmrBjzRVa
+ vO.FKoEl0j80ZCQovmETlZQ9Ll.emM1mmYavzC_5rgzVUC0iJF.63ILWvAGC
+ IUvlKEe2g2ItFtgE2ZCJV5bTcoTt6Orovk0-
+X-Originating-IP: [198.2.182.211]
+Authentication-Results: mta1591.mail.ne1.yahoo.com  from=mail211.suw16.rsgsv.net; domainkeys=neutral (no sig);  from=mail211.suw16.rsgsv.net; dkim=pass (ok)
+Received: from 127.0.0.1  (EHLO mail211.suw16.rsgsv.net) (198.2.182.211)
+  by mta1591.mail.ne1.yahoo.com with SMTP; Tue, 10 May 2016 12:07:23 +0000
+DKIM-Signature: v=1; a=rsa-sha1; c=relaxed/relaxed; s=k1; d=mail211.suw16.rsgsv.net;
+ h=Subject:From:Reply-To:To:Date:Message-ID:List-ID:List-Unsubscribe:Sender:Content-Type:MIME-Version; i=hellosquirrels=3Dairparrot.com@mail211.suw16.rsgsv.net;
+ bh=6N5ZgkgJqIXgowyo+E1xKT+m71E=;
+ b=VKceHCTFh5TQNV85bCwRL5iKUn+W7Z/NnAKzwGLNrlSPuaTZcxbdVrtzIpR7xxC0qw/eeIDfoCzG
+   Fo6sHX4eGQOrYjRT5oA5M7L8AGIRA2Pp1CKU1ikydtYWWbi0yfl/yFOkmFSUrv2bS63/MkkAwHro
+   5MJdG976+mANYTqeSZw=
+DKIM-Signature: v=1; a=rsa-sha1; c=relaxed/relaxed; s=k1; d=fbl.mcsv.net;
+ h=Subject:From:Reply-To:To:Date:Message-ID:X-Feedback-ID:List-ID:List-Unsubscribe:Sender:Content-Type:MIME-Version;
+ bh=6N5ZgkgJqIXgowyo+E1xKT+m71E=;
+ b=nCYlusOjMC6B4ekbZb7RoEi9t/YMrRTtAr19DxjTfjKerKRsdxHGCPNPdy3CUaBLodIzupYPyx7h
+   NX4dBsBfd/17OP6GD0+5csxHp1suDF8w1J5YvqyN+CP9+lK4f9hRn4fKRPT2B19dc5fFsRx/BGYf
+   I1jWsPCFD6AJhWz/ucY=
+Received: from (127.0.0.1) by mail211.suw16.rsgsv.net id h677fm24ba4d for <dev_sanghani@yahoo.com>; Tue, 10 May 2016 12:07:22 +0000 (envelope-from <bounce-mc.us6_13353299.16617-dev_sanghani=yahoo.com@mail211.suw16.rsgsv.net>)
+Subject: =?utf-8?Q?Meet=20AirParrot=20Remote?=
+From: =?utf-8?Q?Squirrels?= <hellosquirrels@airparrot.com>
+Reply-To: =?utf-8?Q?Squirrels?= <hellosquirrels@airparrot.com>
+To: =?utf-8?Q?Dev?= <dev_sanghani@yahoo.com>
+Date: Tue, 10 May 2016 12:07:22 +0000
+Message-ID: <6be48fde72bb4ec8df6198460f33a9ad7b8.20160510120714@mail211.suw16.rsgsv.net>
+X-Mailer: MailChimp Mailer - **CIDf7a2c96256f33a9ad7b8**
+X-Campaign: mailchimp6be48fde72bb4ec8df6198460.f7a2c96256
+X-campaignid: mailchimp6be48fde72bb4ec8df6198460.f7a2c96256
+X-Report-Abuse: Please report abuse for this campaign here: http://www.mailchimp.com/abuse/abuse.phtml?u=6be48fde72bb4ec8df6198460&id=f7a2c96256&e=f33a9ad7b8
+X-MC-User: 6be48fde72bb4ec8df6198460
+X-Feedback-ID: 13353299:13353299.16617:us6:mc
+List-ID: 6be48fde72bb4ec8df6198460mc list <6be48fde72bb4ec8df6198460.10337.list-id.mcsv.net>
+X-Accounttype: pd
+List-Unsubscribe: <mailto:unsubscribe-mc.us6_6be48fde72bb4ec8df6198460.f7a2c96256-f33a9ad7b8@mailin1.us2.mcsv.net?subject=unsubscribe>, <http://airsquirrels.us6.list-manage.com/unsubscribe?u=6be48fde72bb4ec8df6198460&id=e25a0b6c36&e=f33a9ad7b8&c=f7a2c96256>
+Sender: "Squirrels" <hellosquirrels=airparrot.com@mail211.suw16.rsgsv.net>
+x-mcda: FALSE
+Content-Type: multipart/alternative; boundary="_----------=_MCPart_2043944402"
+MIME-Version: 1.0
+X-Yahoo-Forwarded: From dev_sanghani@yahoo.com To devsanghani@gmail.com
+Content-Length: 69670
+
+This is a multi-part message in MIME format
+
+--_----------=_MCPart_2043944402
+Content-Type: text/plain; charset="utf-8"; format="fixed"
+Content-Transfer-Encoding: quoted-printable
+
+Is this email not displaying correctly?
+
+View it in your browser (http://us6.campaign-archive1.com/?u=3D6be48fde72b=
+b4ec8df6198460&id=3Df7a2c96256&e=3Df33a9ad7b8)
+
+http://www.airsquirrels.com/airparrot/remote/http://airparrotremote.com?ut=
+m_source=3DSquirrels&utm_campaign=3Df7a2c96256-Meet+AIrParrot+Remote&utm_m=
+edium=3Demail&utm_term=3D0_e25a0b6c36-f7a2c96256-8635837
+
+Discover AirParrot Remote
+
+Pair AirParrot Remote with AirParrot 2 to enter a world of screen-mirrorin=
+g technology you didn=E2=80=99t know existed.
+https://itunes.apple.com/app/apple-store/id1078412469?pt=3D1850281&ct=3DAi=
+rParrot%20Purchase%20Followup%20Email%202&mt=3D8&utm_source=3DSquirrels&ut=
+m_campaign=3Df7a2c96256-Meet+AIrParrot+Remote&utm_medium=3Demail&utm_term=
+=3D0_e25a0b6c36-f7a2c96256-8635837
+
+We=E2=80=99ve all been there. Too lazy to get up for the remote. But that=
+ seventh-consecutive episode of your favorite show is calling your name. U=
+se your iPhone to select something new to watch. We know you=E2=80=99re no=
+t forgetting that thing anywhere!
+
+AirParrot Remote is a convenient way to browse through and begin streaming=
+ files stored on your computer. There=E2=80=99s no need to get out of bed=
+ and walk to your computer to begin streaming that next episode or movie t=
+o your TV. You have all the controls on your iPhone or iPad!
+
+Discover how to use AirParrot Remote as a tool for the living room. (http:=
+//blog.airsquirrels.com/2016/03/airparrot-remote-a-tool-for-the-living-roo=
+m/?utm_source=3DSquirrels&utm_campaign=3Df7a2c96256-Meet+AIrParrot+Remote&=
+utm_medium=3Demail&utm_term=3D0_e25a0b6c36-f7a2c96256-8635837)
+
+Presenting has never been easier. Use AirParrot Remote to see the presente=
+r view of your slides on your iPad while everyone else in the room sees th=
+e audience view. Look like a pro without wires!
+
+Forgot your laptop in your office? No biggie. Pull out your phone=2C open=
+ AirParrot Remote and command your laptop to connect to the conference roo=
+m=E2=80=99s display. Check the live preview of your laptop screen and then=
+ begin mirroring! Use the built-in remote control options to pull up your=
+ presentation=2C and then flip through slides with a quick tap of the scre=
+en.
+
+Learn how to use your iPad as a second screen while presenting. (http://bl=
+og.airsquirrels.com/2016/03/how-to-use-your-ipad-as-a-second-screen-while-=
+presenting/?utm_source=3DSquirrels&utm_campaign=3Df7a2c96256-Meet+AIrParro=
+t+Remote&utm_medium=3Demail&utm_term=3D0_e25a0b6c36-f7a2c96256-=
+8635837)
+
+Create a playlist of your favorite party jams=2C and control it from your=
+ phone.
+AirParrot Remote allows you to line up an endless supply of music found on=
+ your computer to stream to your TV or AirPlay-enabled speakers. Add your=
+ tunes=2C and rock on!
+
+Learn how to create party playlists with AirParrot Remote. (http://blog.ai=
+rsquirrels.com/2016/04/throw-a-party-with-airparrot-remote/?utm_source=3DS=
+quirrels&utm_campaign=3Df7a2c96256-Meet+AIrParrot+Remote&utm_medium=3Demai=
+l&utm_term=3D0_e25a0b6c36-f7a2c96256-8635837)
+
+Your iPad isn=E2=80=99t just for games. Set it up beside your computer mon=
+itor and use AirParrot Remote as a second screen! How=2C you ask? Once Air=
+Parrot Remote is paired to AirParrot 2=2C tap the Extend Desktop button on=
+ your iPad and then tap the desktop preview. Viola! Extended desktop on yo=
+ur iPad!
+
+Discover how to use your iPad as an extra screen for your computer. (http:=
+//blog.airsquirrels.com/2016/03/how-to-turn-your-ipad-into-an-extended-des=
+ktop-for-mac/?utm_source=3DSquirrels&utm_campaign=3Df7a2c96256-Meet+AIrPar=
+rot+Remote&utm_medium=3Demail&utm_term=3D0_e25a0b6c36-f7a2c96256-=
+8635837)
+
+
+
+
+** AND MORE!
+------------------------------------------------------------
+
+Find more great ways to use AirParrot 2 and AirParrot Remote at our blog a=
+nd on our website!
+Get It Now (https://itunes.apple.com/app/apple-store/id1078412469?pt=3D185=
+0281&ct=3DAirParrot%20Purchase%20Followup%20Email%202&mt=3D8&utm_source=3D=
+Squirrels&utm_campaign=3Df7a2c96256-Meet+AIrParrot+Remote&utm_medium=3Dema=
+il&utm_term=3D0_e25a0b6c36-f7a2c96256-8635837) Learn More (http://=
+www.airparrotremote.com?utm_source=3DSquirrels&utm_campaign=3Df7a2c96256-M=
+eet+AIrParrot+Remote&utm_medium=3Demail&utm_term=3D0_e25a0b6c36-f7a2c96256=
+-8635837)
+
+=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=
+=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=
+=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D
+
+** (http://www.airsquirrels.com?utm_source=3DSquirrels&utm_campaign=3Df7a2=
+c96256-Meet+AIrParrot+Remote&utm_medium=3Demail&utm_term=3D0_e25a0b6c36-f7=
+a2c96256-8635837)
+Copyright =C2=A9 2016 Squirrels=2C LLC=2C All rights reserved.
+
+You're receiving this email because you opted in on our website or purchas=
+ed one of our products. If you would like to unsubscribe from future email=
+s=2C please click the unsubscribe link below.
+
+** unsubscribe from this list (http://airsquirrels.us6.list-manage.com/uns=
+ubscribe?u=3D6be48fde72bb4ec8df6198460&id=3De25a0b6c36&e=3Df33a9ad7b8&c=3Df7=
+a2c96256)
+|   ** update subscription preferences (http://airsquirrels.us6.list-manag=
+e.com/profile?u=3D6be48fde72bb4ec8df6198460&id=3De25a0b6c36&e=3Df33a9ad7b8)
+|   ** view email in your browser (http://us6.campaign-archive1.com/?u=3D6=
+be48fde72bb4ec8df6198460&id=3Df7a2c96256&e=3Df33a9ad7b8)
+--_----------=_MCPart_2043944402
+Content-Type: text/html; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www=
+=2Ew3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns=3D"http://www.w3.org/1999/xhtml">
+    <head><meta name=3D"twitter:image:src" content=3D"https://gallery.mail=
+chimp.com/6be48fde72bb4ec8df6198460/images/c6c0605a-7055-49e1-987e-b4ba1bd=
+c727b.jpg"><meta name=3D"twitter:description" content=3D"AirParrot Remote=
+ allows you to remotely control AirParrot 2 with your iPhone or iPad. Easi=
+ly control what=E2=80=99s being mirrored or streamed from your computer to=
+ Apple TV=2C Chromecast and Reflector-enabled devices from the palm of you=
+r hand. "><meta name=3D"twitter:title" content=3D"Meet AirParrot Remote"><=
+meta name=3D"twitter:card" content=3D"summary_large_image"><meta property=
+=3D"og:type" content=3D"article"><meta property=3D"og:description" content=
+=3D"AirParrot Remote allows you to remotely control AirParrot 2 with your=
+ iPhone or iPad. Easily control what=E2=80=99s being mirrored or streamed=
+ from your computer to Apple TV=2C Chromecast and Reflector-enabled device=
+s from the palm of your hand. "><meta property=3D"og:image" content=3D"htt=
+ps://gallery.mailchimp.com/6be48fde72bb4ec8df6198460/images/c6c0605a-7055-=
+49e1-987e-b4ba1bdc727b.jpg"><meta property=3D"og:title" content=3D"Meet Ai=
+rParrot Remote"><meta property=3D"og:url" content=3D"http://eepurl.com/bZL=
+RiL">
+    =09<!-- NAME: 1:2 COLUMN - BANDED -->
+        <meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3D=
+UTF-8">
+        <meta name=3D"viewport" content=3D"width=3Ddevice-width=2C initial=
+-scale=3D1.0">
+        <title>Meet AirParrot Remote</title>
+
+
+
+<!--[if gte mso 9]>
+    <style type=3D"text/css">
+    h3{
+=09    color:#fff !important;
+=09}
+=09center{
+=09=09padding: 0;
+=09}
+=09.button{
+=09=09display: inline-block;
+=09=09padding: 0.25em 0;
+=09=09text-decoration: none;
+=09=09width: 35%;
+=09=09background: #29c62c;
+=09=09color: #000;
+=09=09border-radius: 5px
+=09=09}
+    </style>
+<![endif]-->
+<style type=3D"text/css">
+=09=09body=2C#bodyTable=2C#bodyCell{
+=09=09=09height:100% !important;
+=09=09=09margin:0;
+=09=09=09padding:0;
+=09=09=09width:100% !important;
+=09=09}
+=09=09table{
+=09=09=09border-collapse:collapse;
+=09=09}
+=09=09img=2Ca img{
+=09=09=09border:0;
+=09=09=09outline:none;
+=09=09=09text-decoration:none;
+=09=09}
+=09=09h1=2Ch2=2Ch3=2Ch4=2Ch5=2Ch6{
+=09=09=09margin:0;
+=09=09=09padding:0;
+=09=09}
+=09=09p{
+=09=09=09margin:1em 0;
+=09=09=09padding:0;
+=09=09}
+=09=09a{
+=09=09=09word-wrap:break-word;
+=09=09}
+=09=09.ReadMsgBody{
+=09=09=09width:100%;
+=09=09}
+=09=09.ExternalClass{
+=09=09=09width:100%;
+=09=09}
+=09=09.ExternalClass=2C.ExternalClass p=2C.ExternalClass span=2C.ExternalC=
+lass font=2C.ExternalClass td=2C.ExternalClass div{
+=09=09=09line-height:100%;
+=09=09}
+=09=09table=2Ctd{
+=09=09=09mso-table-lspace:0pt;
+=09=09=09mso-table-rspace:0pt;
+=09=09}
+=09=09#outlook a{
+=09=09=09padding:0;
+=09=09}
+=09=09img{
+=09=09=09-ms-interpolation-mode:bicubic;
+=09=09}
+=09=09body=2Ctable=2Ctd=2Cp=2Ca=2Cli=2Cblockquote{
+=09=09=09-ms-text-size-adjust:100%;
+=09=09=09-webkit-text-size-adjust:100%;
+=09=09}
+=09=09#bodyCell{
+=09=09=09padding:0;
+=09=09}
+=09=09.mcnImage{
+=09=09=09vertical-align:bottom;
+=09=09}
+=09=09.mcnTextContent img{
+=09=09=09height:auto !important;
+=09=09}
+=09=09#outlook a{
+=09=09=09padding:0;
+=09=09}
+=09=09body{
+=09=09=09width:100% !important;
+=09=09}
+=09=09body{
+=09=09=09-webkit-text-size-adjust:none;
+=09=09}
+=09=09body{
+=09=09=09margin:0;
+=09=09=09padding:0;
+=09=09}
+=09=09img{
+=09=09=09border:none;
+=09=09=09font-weight:bold;
+=09=09=09height:auto;
+=09=09=09line-height:100%;
+=09=09=09outline:none;
+=09=09=09text-decoration:none;
+=09=09=09text-transform:capitalize;
+=09=09}
+=09=09#backgroundTable{
+=09=09=09height:100% !important;
+=09=09=09margin:0;
+=09=09=09padding:0;
+=09=09=09width:100% !important;
+=09=09}
+=09=09.andMore{
+=09=09=09background:#404040;
+=09=09=09width:90%;
+=09=09=09margin-top:-2em;
+=09=09=09height:2.5em;
+=09=09=09margin-left:5%;
+=09=09}
+=09=09.andMore p{
+=09=09=09text-align:center;
+=09=09=09font-family:Arial=2C sans-serif;
+=09=09=09font-size:14pt;
+=09=09=09letter-spacing:0.1em;
+=09=09=09font-weight:500;
+=09=09=09margin-top:-0.25em;
+=09=09=09padding:0.25em;
+=09=09=09margin-left:-2% !important;
+=09=09}
+=09=09body=2C#bodyTable{
+=09=09=09background-color:#404040;
+=09=09}
+=09=09#bodyCell{
+=09=09=09border-top:0;
+=09=09}
+=09=09h1{
+=09=09=09color:#404040 !important;
+=09=09=09display:block;
+=09=09=09font-family:Helvetica;
+=09=09=09font-size:30px;
+=09=09=09font-style:normal;
+=09=09=09font-weight:bold;
+=09=09=09line-height:125%;
+=09=09=09letter-spacing:-1px;
+=09=09=09margin:0;
+=09=09=09text-align:left;
+=09=09}
+=09=09h2{
+=09=09=09color:#404040;
+=09=09=09display:block;
+=09=09=09font-family:Helvetica;
+=09=09=09font-size:26px;
+=09=09=09font-style:normal;
+=09=09=09font-weight:bold;
+=09=09=09line-height:125%;
+=09=09=09letter-spacing:-.75px;
+=09=09=09margin:0;
+=09=09=09text-align:left;
+=09=09}
+=09=09h3{
+=09=09=09color:#404040 !important;
+=09=09=09display:block;
+=09=09=09font-family:Helvetica;
+=09=09=09font-size:18px;
+=09=09=09font-style:normal;
+=09=09=09font-weight:bold;
+=09=09=09line-height:125%;
+=09=09=09letter-spacing:-.5px;
+=09=09=09margin:0;
+=09=09=09text-align:left;
+=09=09}
+=09=09h4{
+=09=09=09color:#404040 !important;
+=09=09=09display:block;
+=09=09=09font-family:Helvetica;
+=09=09=09font-size:16px;
+=09=09=09font-style:normal;
+=09=09=09font-weight:bold;
+=09=09=09line-height:125%;
+=09=09=09letter-spacing:normal;
+=09=09=09margin:0;
+=09=09=09text-align:left;
+=09=09}
+=09=09#templatePreheader{
+=09=09=09background-color:#FFFFFF;
+=09=09=09border-top:0;
+=09=09=09border-bottom:0;
+=09=09}
+=09=09.preheaderContainer .mcnTextContent=2C.preheaderContainer .mcnTextCo=
+ntent p{
+=09=09=09color:#404040;
+=09=09=09font-family:Helvetica;
+=09=09=09font-size:14px;
+=09=09=09line-height:125%;
+=09=09=09text-align:left;
+=09=09}
+=09=09.preheaderContainer .mcnTextContent a{
+=09=09=09color:#35CB3A;
+=09=09=09font-weight:normal;
+=09=09=09text-decoration:underline;
+=09=09}
+=09=09#templateHeader{
+=09=09=09background-color:#fefefe;
+=09=09=09border-top:0;
+=09=09=09border-bottom:0;
+=09=09}
+=09=09.headerContainer .mcnTextContent=2C.headerContainer .mcnTextContent=
+ p{
+=09=09=09color:#606060;
+=09=09=09font-family:Helvetica;
+=09=09=09font-size:15px;
+=09=09=09line-height:150%;
+=09=09=09text-align:left;
+=09=09}
+=09=09.headerContainer .mcnTextContent a{
+=09=09=09color:#35CB3A;
+=09=09=09font-weight:normal;
+=09=09=09text-decoration:underline;
+=09=09}
+=09=09#templateBody{
+=09=09=09background-color:#ffffff;
+=09=09=09border-top:0;
+=09=09=09border-bottom:0;
+=09=09}
+=09=09.bodyContainer .mcnTextContent=2C.bodyContainer .mcnTextContent p{
+=09=09=09color:#7b7b7b;
+=09=09=09font-family:Helvetica;
+=09=09=09font-size:15px;
+=09=09=09line-height:150%;
+=09=09=09text-align:left;
+=09=09}
+=09=09.bodyContainer .mcnTextContent a{
+=09=09=09color:#35CB3A;
+=09=09=09font-weight:normal;
+=09=09=09text-decoration:underline;
+=09=09}
+=09=09#templateBodySub{
+=09=09=09background-color:#f3f3f3;
+=09=09=09border-top:0;
+=09=09=09border-bottom:0;
+=09=09}
+=09=09#templateBodySub h2{
+=09=09=09color:#404040;
+=09=09}
+=09=09#templateBodySub p{
+=09=09=09color:#7b7b7b;
+=09=09}
+=09=09.bodySubContainer .mcnTextContent=2C.bodySubContainer .mcnTextConten=
+t p{
+=09=09=09color:#7b7b7b;
+=09=09=09font-family:Helvetica;
+=09=09=09font-size:15px;
+=09=09=09line-height:150%;
+=09=09=09text-align:left;
+=09=09=09margin-left:5%;
+=09=09}
+=09=09#templateBody .bodySubContainer img{
+=09=09=09margin-left:5%;
+=09=09}
+=09=09tr td.mcnTextContent.fullContainerCopy img{
+=09=09=09margin-left:5%;
+=09=09}
+=09=09td.mcnTextContent.mcnTextContentTop.fullContainerCopy div.copyp p{
+=09=09=09margin-left:4%;
+=09=09}
+=09=09.bodySubContainer .mcnTextContent a{
+=09=09=09color:#35CB3A;
+=09=09=09font-weight:normal;
+=09=09=09text-decoration:underline;
+=09=09}
+=09=09#templateColumns{
+=09=09=09background-color:#ffffff;
+=09=09=09border-top:0;
+=09=09=09border-bottom:0;
+=09=09}
+=09=09.leftColumnContainer .mcnTextContent=2C.leftColumnContainer .mcnText=
+Content p{
+=09=09=09color:#7b7b7b;
+=09=09=09font-family:Helvetica;
+=09=09=09font-size:15px;
+=09=09=09line-height:150%;
+=09=09=09text-align:left;
+=09=09}
+=09=09.leftColumnContainer .mcnTextContent a{
+=09=09=09color:#35CB3A;
+=09=09=09font-weight:normal;
+=09=09=09text-decoration:underline;
+=09=09}
+=09=09.rightColumnContainer .mcnTextContent=2C.rightColumnContainer .mcnTe=
+xtContent p{
+=09=09=09color:#7b7b7b;
+=09=09=09font-family:Helvetica;
+=09=09=09font-size:15px;
+=09=09=09line-height:150%;
+=09=09=09text-align:left;
+=09=09}
+=09=09.rightColumnContainer .mcnTextContent a{
+=09=09=09color:#35CB3A;
+=09=09=09font-weight:normal;
+=09=09=09text-decoration:underline;
+=09=09}
+=09=09#templateFooter{
+=09=09=09background-color:#404040;
+=09=09=09border-top:0;
+=09=09=09border-bottom:0;
+=09=09}
+=09=09.footerContainer .mcnTextContent=2C.footerContainer .mcnTextContent=
+ p{
+=09=09=09color:#ffffff;
+=09=09=09font-family:Helvetica;
+=09=09=09font-size:14px;
+=09=09=09line-height:125%;
+=09=09=09text-align:left;
+=09=09}
+=09=09.footerContainer .mcnTextContent a{
+=09=09=09color:#35CB3A;
+=09=09=09font-weight:normal;
+=09=09=09text-decoration:underline;
+=09=09}
+=09=09.copyp p{
+=09=09=09line-height:30px !important;
+=09=09}
+=09@media only screen and (max-width: 480px){
+=09=09body=2Ctable=2Ctd=2Cp=2Ca=2Cli=2Cblockquote{
+=09=09=09-webkit-text-size-adjust:none !important;
+=09=09}
+
+}=09@media only screen and (max-width: 480px){
+=09=09p{
+=09=09=09text-align:center !important;
+=09=09=09margin:5% !important;
+=09=09}
+
+}=09@media only screen and (max-width: 480px){
+=09=09body{
+=09=09=09width:100% !important;
+=09=09=09min-width:100% !important;
+=09=09}
+
+}=09@media only screen and (max-width: 480px){
+=09=09.fullContainerCopy img{
+=09=09=09width:100% !important;
+=09=09=09height:auto !important;
+=09=09}
+
+}=09@media only screen and (max-width: 480px){
+=09=09table[class=3DmcnTextContentContainer]{
+=09=09=09width:100% !important;
+=09=09}
+
+}=09@media only screen and (max-width: 480px){
+=09=09table[class=3DmcnBoxedTextContentContainer]{
+=09=09=09width:100% !important;
+=09=09}
+
+}=09@media only screen and (max-width: 480px){
+=09=09table[class=3Dmcpreview-image-uploader]{
+=09=09=09width:100% !important;
+=09=09=09display:none !important;
+=09=09}
+
+}=09@media only screen and (max-width: 480px){
+=09=09img[class=3DmcnImage]{
+=09=09=09width:100% !important;
+=09=09}
+
+}=09@media only screen and (max-width: 480px){
+=09=09table[class=3DmcnImageGroupContentContainer]{
+=09=09=09width:100% !important;
+=09=09}
+
+}=09@media only screen and (max-width: 480px){
+=09=09td[class=3DmcnImageGroupContent]{
+=09=09=09padding:9px !important;
+=09=09}
+
+}=09@media only screen and (max-width: 480px){
+=09=09td[class=3DmcnImageGroupBlockInner]{
+=09=09=09padding-bottom:0 !important;
+=09=09=09padding-top:0 !important;
+=09=09}
+
+}=09@media only screen and (max-width: 480px){
+=09=09tbody[class=3DmcnImageGroupBlockOuter]{
+=09=09=09padding-bottom:9px !important;
+=09=09=09padding-top:9px !important;
+=09=09}
+
+}=09@media only screen and (max-width: 480px){
+=09=09table[class=3DmcnCaptionTopContent]=2Ctable[class=3DmcnCaptionBott=
+omContent]{
+=09=09=09width:100% !important;
+=09=09}
+
+}=09@media only screen and (max-width: 480px){
+=09=09table[class=3DmcnCaptionLeftTextContentContainer]=2Ctable[class=3D=
+mcnCaptionRightTextContentContainer]=2Ctable[class=3DmcnCaptionLeftImageC=
+ontentContainer]=2Ctable[class=3DmcnCaptionRightImageContentContainer]=2C=
+table[class=3DmcnImageCardLeftTextContentContainer]=2Ctable[class=3DmcnI=
+mageCardRightTextContentContainer]{
+=09=09=09width:100% !important;
+=09=09}
+
+}=09@media only screen and (max-width: 480px){
+=09=09td.mcnTextContent.mcnTextContentTop{
+=09=09=09width:100% !important;
+=09=09}
+
+}=09@media only screen and (max-width: 480px){
+=09=09td.mcnTextContent.mcnTextContentHide{
+=09=09=09display:none !important;
+=09=09}
+
+}=09@media only screen and (max-width: 480px){
+=09=09#templateHeader .mcnImageContent img{
+=09=09=09width:100% !important;
+=09=09=09height:auto !important;
+=09=09}
+
+}=09@media only screen and (max-width: 480px){
+=09=09td[class=3DmcnImageCardLeftImageContent]=2Ctd[class=3DmcnImageCard=
+RightImageContent]{
+=09=09=09padding-right:18px !important;
+=09=09=09padding-left:18px !important;
+=09=09=09padding-bottom:0 !important;
+=09=09}
+
+}=09@media only screen and (max-width: 480px){
+=09=09td[class=3DmcnImageCardBottomImageContent]{
+=09=09=09padding-bottom:9px !important;
+=09=09}
+
+}=09@media only screen and (max-width: 480px){
+=09=09td[class=3DmcnImageCardTopImageContent]{
+=09=09=09padding-top:18px !important;
+=09=09}
+
+}=09@media only screen and (max-width: 480px){
+=09=09td[class=3DmcnImageCardLeftImageContent]=2Ctd[class=3DmcnImageCard=
+RightImageContent]{
+=09=09=09padding-right:18px !important;
+=09=09=09padding-left:18px !important;
+=09=09=09padding-bottom:0 !important;
+=09=09}
+
+}=09@media only screen and (max-width: 480px){
+=09=09td[class=3DmcnImageCardBottomImageContent]{
+=09=09=09padding-bottom:9px !important;
+=09=09}
+
+}=09@media only screen and (max-width: 480px){
+=09=09td[class=3DmcnImageCardTopImageContent]{
+=09=09=09padding-top:18px !important;
+=09=09}
+
+}=09@media only screen and (max-width: 480px){
+=09=09table[class=3DmcnCaptionLeftContentOuter] td[class=3DmcnTextConten=
+t]=2Ctable[class=3DmcnCaptionRightContentOuter] td[class=3DmcnTextConten=
+t]{
+=09=09=09padding-top:9px !important;
+=09=09}
+
+}=09@media only screen and (max-width: 480px){
+=09=09td[class=3DmcnCaptionBlockInner] table[class=3DmcnCaptionTopConten=
+t]:last-child td[class=3DmcnTextContent]{
+=09=09=09padding-top:18px !important;
+=09=09}
+
+}=09@media only screen and (max-width: 480px){
+=09=09td[class=3DmcnBoxedTextContentColumn]{
+=09=09=09padding-left:18px !important;
+=09=09=09padding-right:18px !important;
+=09=09}
+
+}=09@media only screen and (max-width: 480px){
+=09=09td[class=3DcolumnsContainer]{
+=09=09=09display:block !important;
+=09=09=09max-width:600px !important;
+=09=09=09width:100% !important;
+=09=09}
+
+}=09@media only screen and (max-width: 480px){
+=09=09td[class=3DmcnTextContent]{
+=09=09=09padding-right:18px !important;
+=09=09=09padding-left:18px !important;
+=09=09}
+
+}=09@media only screen and (max-width: 480px){
+=09=09td[class=3DcolCopy]{
+=09=09=09width:100% !important;
+=09=09=09display:block !important;
+=09=09=09float:none !important;
+=09=09}
+
+}=09@media only screen and (max-width: 480px){
+=09=09.andMore{
+=09=09=09margin-top:-2em !important;
+=09=09=09margin-left:2%;
+=09=09=09padding:0.5em;
+=09=09=09height:2em !important;
+=09=09=09width:100%;
+=09=09}
+
+}=09@media only screen and (max-width: 480px){
+=09=09.andMore p{
+=09=09=09margin-top:0 !important;
+=09=09}
+
+}=09@media only screen and (max-width: 480px){
+=09=09table[class=3DtemplateContainer]=2Ctable[id=3DtemplateColumns]=2Ct=
+able[class=3DtemplateColumn]{
+=09=09=09max-width:640px !important;
+=09=09=09width:100% !important;
+=09=09}
+
+}=09@media only screen and (max-width: 480px){
+=09=09h1{
+=09=09=09font-size:24px !important;
+=09=09=09line-height:125% !important;
+=09=09}
+
+}=09@media only screen and (max-width: 480px){
+=09=09h2{
+=09=09=09font-size:20px !important;
+=09=09=09line-height:125% !important;
+=09=09}
+
+}=09@media only screen and (max-width: 480px){
+=09=09h3{
+=09=09=09font-size:18px !important;
+=09=09=09line-height:125% !important;
+=09=09}
+
+}=09@media only screen and (max-width: 480px){
+=09=09h4{
+=09=09=09font-size:16px !important;
+=09=09=09line-height:125% !important;
+=09=09}
+
+}=09@media only screen and (max-width: 480px){
+=09=09table[class=3DmcnBoxedTextContentContainer] td[class=3DmcnTextCont=
+ent]=2Ctd[class=3DmcnBoxedTextContentContainer] td[class=3DmcnTextConten=
+t] p{
+=09=09=09font-size:18px !important;
+=09=09=09line-height:125% !important;
+=09=09}
+
+}=09@media only screen and (max-width: 480px){
+=09=09table[id=3DtemplatePreheader]{
+=09=09=09display:block !important;
+=09=09}
+
+}=09@media only screen and (max-width: 480px){
+=09=09td[class=3DpreheaderContainer] td[class=3DmcnTextContent]=2Ctd[cl=
+ass=3DpreheaderContainer] td[class=3DmcnTextContent] p{
+=09=09=09font-size:14px !important;
+=09=09=09line-height:115% !important;
+=09=09}
+
+}=09@media only screen and (max-width: 480px){
+=09=09td[class=3DheaderContainer] td[class=3DmcnTextContent]=2Ctd[class=
+=3DheaderContainer] td[class=3DmcnTextContent] p{
+=09=09=09font-size:18px !important;
+=09=09=09line-height:125% !important;
+=09=09}
+
+}=09@media only screen and (max-width: 480px){
+=09=09td[class=3DbodyContainer] td[class=3DmcnTextContent]=2Ctd[class=
+=3DbodyContainer] td[class=3DmcnTextContent] p{
+=09=09=09font-size:18px !important;
+=09=09=09line-height:125% !important;
+=09=09}
+
+}=09@media only screen and (max-width: 480px){
+=09=09td[class=3DleftColumnContainer] td[class=3DmcnTextContent]=2Ctd[c=
+lass=3DleftColumnContainer] td[class=3DmcnTextContent] p{
+=09=09=09font-size:18px !important;
+=09=09=09line-height:125% !important;
+=09=09}
+
+}=09@media only screen and (max-width: 480px){
+=09=09td[class=3DrightColumnContainer] td[class=3DmcnTextContent]=2Ctd[=
+class=3DrightColumnContainer] td[class=3DmcnTextContent] p{
+=09=09=09font-size:18px !important;
+=09=09=09line-height:125% !important;
+=09=09}
+
+}=09@media only screen and (max-width: 480px){
+=09=09td[class=3DfooterContainer] td[class=3DmcnTextContent]=2Ctd[class=
+=3DfooterContainer] td[class=3DmcnTextContent] p{
+=09=09=09font-size:14px !important;
+=09=09=09line-height:115% !important;
+=09=09}
+
+}=09@media only screen and (max-width: 480px){
+=09=09td[class=3DfooterContainer] a[class=3DutilityLink]{
+=09=09=09display:block !important;
+=09=09}
+
+}=09@media only screen and (max-width: 480px){
+=09=09.mobile-hide{
+=09=09=09display:none !important;
+=09=09}
+
+}=09@media only screen and (max-width: 480px){
+=09=09.mobile-full{
+=09=09=09display:block !important;
+=09=09=09width:100% !important;
+=09=09=09clear:both !important;
+=09=09=09float:none !important;
+=09=09}
+
+}=09@media only screen and (max-width: 480px){
+=09=09td.mobile-full{
+=09=09=09display:block !important;
+=09=09=09width:100% !important;
+=09=09=09clear:both !important;
+=09=09=09float:none !important;
+=09=09}
+
+}=09@media only screen and (max-width: 480px){
+=09=09td.mobile-full p{
+=09=09=09margin-top:0 !important;
+=09=09}
+
+}=09@media only screen and (max-width: 480px){
+=09=09.mobile-ol-full{
+=09=09=09padding:10px !important;
+=09=09}
+
+}=09@media only screen and (max-width: 480px){
+=09=09img.appstoreico{
+=09=09=09width:130px !important;
+=09=09=09height:55px !important;
+=09=09}
+
+}=09@media only screen and (max-width: 480px){
+=09=09img.mobile-img{
+=09=09=09width:43px !important;
+=09=09=09height:50px !important;
+=09=09}
+
+}=09@media only screen and (max-width: 480px){
+=09=09.andMore=2C.andMore p=2C#templateBody .bodySubContainer img=2Ctr td.=
+mcnTextContent.fullContainerCopy img=2Ctd.mcnTextContent.mcnTextContentTop=
+=2EfullContainerCopy div.copyp p{
+=09=09=09margin-left:0 !important;
+=09=09}
+
+}=09@media only screen and (max-width: 480px){
+=09=09.mobile-full.button{
+=09=09=09width:100%;
+=09=09=09margin-bottom:20px !important;
+=09=09}
+
+}</style></head>
+    <body leftmargin=3D"0" marginwidth=3D"0" topmargin=3D"0" marginheight=
+=3D"0" offset=3D"0" style=3D"margin: 0;padding: 0;-ms-text-size-adjust: 10=
+0%;-webkit-text-size-adjust: none;background-color: #404040;height: 100% !=
+important;width: 100% !important;"><div itemscope=3D"" itemtype=3D"http://=
+schema.org/EmailMessage"><div itemprop=3D"publisher" itemscope=3D"" itemty=
+pe=3D"http://schema.org/Organization"><meta itemprop=3D"name" content=3D"S=
+quirrels=2C LLC"><link itemprop=3D"url" content=3D"http://airsquirrels.com=
+"></div><div itemprop=3D"about" itemscope=3D"" itemtype=3D"http://schema.o=
+rg/Offer"><link itemprop=3D"image" href=3D"https://gallery.mailchimp.com/6=
+be48fde72bb4ec8df6198460/images/c6c0605a-7055-49e1-987e-b4ba1bdc727b.jpg">=
+</div></div>
+        <center>
+            <table align=3D"center" border=3D"0" cellpadding=3D"0" cellspa=
+cing=3D"0" height=3D"100%" width=3D"100%" id=3D"bodyTable" style=3D"border=
+-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-s=
+ize-adjust: 100%;-webkit-text-size-adjust: 100%;margin: 0;padding: 0;backg=
+round-color: #404040;height: 100% !important;width: 100% !important;">
+                <tr>
+                    <td align=3D"center" valign=3D"top" id=3D"bodyCell" st=
+yle=3D"mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 1=
+00%;-webkit-text-size-adjust: 100%;margin: 0;padding: 0;border-top: 0;heig=
+ht: 100% !important;width: 100% !important;">
+                        <!-- BEGIN TEMPLATE // -->
+                        <table border=3D"0" cellpadding=3D"0" cellspacing=
+=3D"0" width=3D"100%" style=3D"border-collapse: collapse;mso-table-lspace:=
+ 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-ad=
+just: 100%;">
+                            <tr>
+                                <td align=3D"center" valign=3D"top" style=
+=3D"mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%=
+;-webkit-text-size-adjust: 100%;">
+                                    <!-- BEGIN PREHEADER // -->
+                                    <table border=3D"0" cellpadding=3D"0"=
+ cellspacing=3D"0" width=3D"100%" id=3D"templatePreheader" style=3D"border=
+-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-s=
+ize-adjust: 100%;-webkit-text-size-adjust: 100%;background-color: #FFFFFF;=
+border-top: 0;border-bottom: 0;">
+                                        <tr>
+                                        =09<td align=3D"center" valign=3D"=
+top" style=3D"mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-ad=
+just: 100%;-webkit-text-size-adjust: 100%;">
+                                                <table border=3D"0" cellpa=
+dding=3D"0" cellspacing=3D"0" width=3D"640" class=3D"templateContainer" st=
+yle=3D"border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0=
+pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
+                                                    <tr>
+                                                        <td valign=3D"top"=
+ class=3D"preheaderContainer" style=3D"padding-top: 9px;mso-table-lspace:=
+ 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-ad=
+just: 100%;"><table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=
+=3D"100%" class=3D"mcnTextBlock" style=3D"border-collapse: collapse;mso-ta=
+ble-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-t=
+ext-size-adjust: 100%;">
+    <tbody class=3D"mcnTextBlockOuter">
+        <tr>
+            <td valign=3D"top" class=3D"mcnTextBlockInner" style=3D"mso-ta=
+ble-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-t=
+ext-size-adjust: 100%;">
+
+                <table align=3D"left" border=3D"0" cellpadding=3D"0" cells=
+pacing=3D"0" width=3D"366" class=3D"mcnTextContentContainer" style=3D"bord=
+er-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text=
+-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
+                    <tbody><tr>
+
+                        <td valign=3D"top" class=3D"mcnTextContent" style=
+=3D"padding-top: 9px;padding-left: 18px;padding-bottom: 9px;padding-right:=
+ 0;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;=
+-webkit-text-size-adjust: 100%;color: #404040;font-family: Helvetica;font-=
+size: 14px;line-height: 125%;text-align: left;">
+
+                            <div>Is this email not displaying correctly?</=
+div>
+                        </td>
+                    </tr>
+                </tbody></table>
+
+                <table align=3D"right" border=3D"0" cellpadding=3D"0" cell=
+spacing=3D"0" width=3D"197" class=3D"mcnTextContentContainer" style=3D"bor=
+der-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-tex=
+t-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
+                    <tbody><tr>
+
+                        <td valign=3D"top" class=3D"mcnTextContent" style=
+=3D"padding-top: 9px;padding-right: 18px;padding-bottom: 9px;padding-left:=
+ 0;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;=
+-webkit-text-size-adjust: 100%;color: #404040;font-family: Helvetica;font-=
+size: 14px;line-height: 125%;text-align: left;">
+
+                            <div><a href=3D"http://us6.campaign-archive1.c=
+om/?u=3D6be48fde72bb4ec8df6198460&id=3Df7a2c96256&e=3Df33a9ad7b8" target=3D"=
+_blank" style=3D"word-wrap: break-word;-ms-text-size-adjust: 100%;-webkit-=
+text-size-adjust: 100%;color: #35CB3A;font-weight: normal;text-decoration:=
+ underline;">View it in your browser</a></div>
+                        </td>
+                    </tr>
+                </tbody></table>
+
+            </td>
+        </tr>
+    </tbody>
+</table></td>
+                                                    </tr>
+                                                </table>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                    <!-- // END PREHEADER -->
+                                </td>
+                            </tr>
+                            <tr>
+                                <td align=3D"center" valign=3D"top" style=
+=3D"mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%=
+;-webkit-text-size-adjust: 100%;">
+                                    <!-- BEGIN HEADER // -->
+                                    <table border=3D"0" cellpadding=3D"0"=
+ cellspacing=3D"0" width=3D"100%" id=3D"templateHeader" style=3D"border-co=
+llapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size=
+-adjust: 100%;-webkit-text-size-adjust: 100%;background-color: #fefefe;bor=
+der-top: 0;border-bottom: 0;">
+                                        <tr>
+                                        =09<td class=3D"mcnImageContent" v=
+align=3D"top" style=3D"padding: 0;mso-table-lspace: 0pt;mso-table-rspace:=
+ 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;"><center><=
+a href=3D"http://airsquirrels.us6.list-manage2.com/track/click?u=3D6be48fd=
+e72bb4ec8df6198460&id=3D20ae883b90&e=3Df33a9ad7b8" style=3D"display: bloc=
+k;text-align: center;word-wrap: break-word;-ms-text-size-adjust: 100%;-web=
+kit-text-size-adjust: 100%;"><center></center></a><a href=3D"http://airsqu=
+irrels.us6.list-manage1.com/track/click?u=3D6be48fde72bb4ec8df6198460&id=
+=3D5be085822f&e=3Df33a9ad7b8" target=3D"_blank" style=3D"word-wrap: break=
+-word;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;"><img ali=
+gn=3D"none" height=3D"255" src=3D"https://gallery.mailchimp.com/6be48fde72=
+bb4ec8df6198460/images/c6c0605a-7055-49e1-987e-b4ba1bdc727b.jpg" style=3D"=
+display: block;width: 800px;height: 255px;margin: 0px;border: 0;outline: n=
+one;text-decoration: none;-ms-interpolation-mode: bicubic;font-weight: bol=
+d;line-height: 100%;text-transform: capitalize;" width=3D"800"></a></cente=
+r>
+</td></tr></table></td></tr></table></td></tr></table></center>
+=09=09=09=09=09=09=09=09=09=09
+=09=09=09=09=09=09=09=09=09
+                =09=09=09=09
+            =09=09=09=09
+                            <tr>
+                                <td align=3D"center" valign=3D"top" style=
+=3D"mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%=
+;-webkit-text-size-adjust: 100%;">
+                                    <!-- BEGIN BODY // -->
+                                    <table border=3D"0" cellpadding=3D"0"=
+ cellspacing=3D"0" width=3D"100%" id=3D"templateBody" style=3D"border-coll=
+apse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-a=
+djust: 100%;-webkit-text-size-adjust: 100%;background-color: #ffffff;borde=
+r-top: 0;border-bottom: 0;">
+                                        <tr>
+                                            <td align=3D"center" valign=3D=
+"top" style=3D"mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-a=
+djust: 100%;-webkit-text-size-adjust: 100%;">
+                                                <table border=3D"0" cellpa=
+dding=3D"0" cellspacing=3D"0" width=3D"640" class=3D"templateContainer" st=
+yle=3D"border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0=
+pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
+                                                    <tr>
+                                                        <td valign=3D"top"=
+ class=3D"bodyContainer" style=3D"padding-top: 20px;padding-bottom: 10px;m=
+so-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-web=
+kit-text-size-adjust: 100%;">
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09  <table border=3D"0=
+" cellpadding=3D"0" cellspacing=3D"0" width=3D"100%" class=3D"mcnTextBlock=
+" style=3D"border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspac=
+e: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09    <tbody class=
+=3D"mcnTextBlockOuter">
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09        <tr>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09            <td v=
+align=3D"top" class=3D"mcnTextBlockInner" style=3D"mso-table-lspace: 0pt;m=
+so-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust:=
+ 100%;">
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09                <=
+table align=3D"left" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" widt=
+h=3D"640" class=3D"mcnTextContentContainer" style=3D"border-collapse: coll=
+apse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100=
+%;-webkit-text-size-adjust: 100%;">
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09                =
+    <tbody><tr>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09                =
+        <td valign=3D"top" class=3D"mcnTextContent mcnTextContentTop fullC=
+ontainerCopy" style=3D"padding-top: 15px;padding-right: 5px;padding-bottom=
+: 15px;padding-left: 5px;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-t=
+ext-size-adjust: 100%;-webkit-text-size-adjust: 100%;color: #7b7b7b;font-f=
+amily: Helvetica;font-size: 15px;line-height: 150%;text-align: left;">
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09                =
+        <div class=3D"copyp"><p style=3D"text-align: center;font-size: 18p=
+t;font-family: Arial=2C sans-serif;margin: 1em 0;padding: 0;-ms-text-size-=
+adjust: 100%;-webkit-text-size-adjust: 100%;color: #7b7b7b;line-height: 30=
+px !important;margin-left: 4%;">Discover AirParrot Remote</p>
+
+<p style=3D"text-align: center;margin: 1em 0;padding: 0;-ms-text-size-adju=
+st: 100%;-webkit-text-size-adjust: 100%;color: #7b7b7b;font-family: Helvet=
+ica;font-size: 15px;line-height: 30px !important;margin-left: 4%;">Pair Ai=
+rParrot Remote with AirParrot 2 to enter a world of screen-mirroring techn=
+ology you didn&rsquo;t know existed.<br>
+<a href=3D"http://airsquirrels.us6.list-manage.com/track/click?u=3D6be48fd=
+e72bb4ec8df6198460&id=3Df6a1abff56&e=3Df33a9ad7b8" target=3D"_blank" styl=
+e=3D"word-wrap: break-word;-ms-text-size-adjust: 100%;-webkit-text-size-ad=
+just: 100%;color: #35CB3A;font-weight: normal;text-decoration: underline;"=
+><img height=3D"75" src=3D"https://gallery.mailchimp.com/6be48fde72bb4ec8d=
+f6198460/images/e6952337-e48b-45a2-905e-a25f8eb832cb.gif" width=3D"302" st=
+yle=3D"border: 0;outline: none;text-decoration: none;-ms-interpolation-mod=
+e: bicubic;font-weight: bold;height: auto !important;line-height: 100%;tex=
+t-transform: capitalize;margin-left: 5%;"></a></p>
+</div>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09                =
+        </td>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09                =
+    </tr>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09                <=
+/tbody></table>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09            </td>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09        </tr>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09    </tbody>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09</table></td>
+                                                    </tr>
+                                                </table>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                    <table border=3D"0" cellpadding=3D"0"=
+ cellspacing=3D"0" width=3D"100%" id=3D"templateBodySub" style=3D"border-c=
+ollapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-siz=
+e-adjust: 100%;-webkit-text-size-adjust: 100%;background-color: #f3f3f3;bo=
+rder-top: 0;border-bottom: 0;">
+                                        <tr>
+                                            <td align=3D"center" valign=3D=
+"top" style=3D"mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-a=
+djust: 100%;-webkit-text-size-adjust: 100%;">
+                                                <table border=3D"0" cellpa=
+dding=3D"0" cellspacing=3D"0" width=3D"640" class=3D"templateContainer" st=
+yle=3D"border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0=
+pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
+                                                    <tr>
+                                                        <td valign=3D"top"=
+ class=3D"bodySubContainer" style=3D"padding-top: 0px;padding-bottom: 10px=
+;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-w=
+ebkit-text-size-adjust: 100%;"><table border=3D"0" cellpadding=3D"0" cells=
+pacing=3D"0" width=3D"100%" class=3D"mcnTextBlock" style=3D"border-collaps=
+e: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adju=
+st: 100%;-webkit-text-size-adjust: 100%;">
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09    <tbody class=3D"mcnTextBlock=
+Outer">
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09        <tr>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09            <td valign=3D"top" c=
+lass=3D"mcnTextBlockInner" style=3D"mso-table-lspace: 0pt;mso-table-rspace=
+: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09                <table align=3D"=
+left" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"100%" clas=
+s=3D"mcnTextContentContainer" style=3D"border-collapse: collapse;mso-table=
+-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text=
+-size-adjust: 100%;">
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09                    <tbody><tr>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09                        <td cols=
+pan=3D"2" valign=3D"top" class=3D"mcnTextContent fullContainerCopy" style=
+=3D"mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%=
+;-webkit-text-size-adjust: 100%;color: #7b7b7b;font-family: Helvetica;font=
+-size: 15px;line-height: 150%;text-align: left;margin-left: 5%;">
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09                        <img src=
+=3D"https://gallery.mailchimp.com/6be48fde72bb4ec8df6198460/images/bc82b82=
+4-0ef0-4f78-8b87-68256da4658c.png" width=3D"90%" style=3D"border: none;out=
+line: none;text-decoration: none;-ms-interpolation-mode: bicubic;font-weig=
+ht: bold;height: auto !important;line-height: 100%;text-transform: capital=
+ize;margin-left: 5%;">
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09                        <div cla=
+ss=3D"copyp"><p style=3D"margin: 1em 0;padding: 0;-ms-text-size-adjust: 10=
+0%;-webkit-text-size-adjust: 100%;color: #7b7b7b;font-family: Helvetica;fo=
+nt-size: 15px;line-height: 30px !important;text-align: left;margin-left: 5=
+%;">We&rsquo;ve all been there. Too lazy to get up for the remote. But tha=
+t seventh-consecutive episode of your favorite show is calling your name.=
+ Use your iPhone to select something new to watch. We know you&rsquo;re no=
+t forgetting that thing anywhere!</p>
+
+<p style=3D"margin: 1em 0;padding: 0;-ms-text-size-adjust: 100%;-webkit-te=
+xt-size-adjust: 100%;color: #7b7b7b;font-family: Helvetica;font-size: 15px=
+;line-height: 30px !important;text-align: left;margin-left: 5%;">AirParrot=
+ Remote is a convenient way to browse through and begin streaming files st=
+ored on your computer. There&rsquo;s no need to get out of bed and walk to=
+ your computer to begin streaming that next episode or movie to your TV. Y=
+ou have all the controls on your iPhone or iPad!</p>
+
+<p style=3D"text-align: center;margin: 1em 0;padding: 0;-ms-text-size-adju=
+st: 100%;-webkit-text-size-adjust: 100%;color: #7b7b7b;font-family: Helvet=
+ica;font-size: 15px;line-height: 30px !important;margin-left: 5%;"><a href=
+=3D"http://airsquirrels.us6.list-manage.com/track/click?u=3D6be48fde72bb4e=
+c8df6198460&id=3D303d12a269&e=3Df33a9ad7b8" target=3D"_blank" style=3D"wo=
+rd-wrap: break-word;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 1=
+00%;color: #35CB3A;font-weight: normal;text-decoration: underline;">Discov=
+er how to use AirParrot Remote as a tool for the living room.</a></p>
+</div>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09                        </td>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09                    </tr>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09                               =
+     </tbody></table>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09            </td>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09        </tr>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09    </tbody>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09</table></td>
+                                                    </tr>
+                                                </table>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                    <table border=3D"0" cellpadding=3D"0"=
+ cellspacing=3D"0" width=3D"100%" id=3D"templateBodySub" style=3D"backgrou=
+nd: #fff;border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace:=
+ 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
+                                        <tr>
+                                            <td align=3D"center" valign=3D=
+"top" style=3D"mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-a=
+djust: 100%;-webkit-text-size-adjust: 100%;">
+                                                <table border=3D"0" cellpa=
+dding=3D"0" cellspacing=3D"0" width=3D"640" class=3D"templateContainer" st=
+yle=3D"border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0=
+pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
+                                                    <tr>
+                                                        <td valign=3D"top"=
+ class=3D"bodySubContainer" style=3D"padding-top: 0px;padding-bottom: 10px=
+;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-w=
+ebkit-text-size-adjust: 100%;"><table border=3D"0" cellpadding=3D"0" cells=
+pacing=3D"0" width=3D"100%" class=3D"mcnTextBlock" style=3D"border-collaps=
+e: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adju=
+st: 100%;-webkit-text-size-adjust: 100%;">
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09    <tbody class=
+=3D"mcnTextBlockOuter">
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09        <tr>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09            <td v=
+align=3D"top" class=3D"mcnTextBlockInner" style=3D"mso-table-lspace: 0pt;m=
+so-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust:=
+ 100%;">
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09                <=
+table align=3D"left" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" widt=
+h=3D"640" class=3D"mcnTextContentContainer" style=3D"border-collapse: coll=
+apse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100=
+%;-webkit-text-size-adjust: 100%;">
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09                =
+    <tbody><tr>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09                =
+        <td colspan=3D"2" valign=3D"top" class=3D"mcnTextContent fullConta=
+inerCopy" style=3D"mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-si=
+ze-adjust: 100%;-webkit-text-size-adjust: 100%;color: #7b7b7b;font-family:=
+ Helvetica;font-size: 15px;line-height: 150%;text-align: left;margin-left:=
+ 5%;">
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09                =
+        <div class=3D"copyp"><img src=3D"https://gallery.mailchimp.com/6be=
+48fde72bb4ec8df6198460/images/caf2c0ca-6610-4f04-951f-638770311754.png" st=
+yle=3D"width: 90%;border: none;outline: none;text-decoration: none;-ms-int=
+erpolation-mode: bicubic;font-weight: bold;height: auto !important;line-he=
+ight: 100%;text-transform: capitalize;margin-left: 5%;">
+<p style=3D"margin: 1em 0;padding: 0;-ms-text-size-adjust: 100%;-webkit-te=
+xt-size-adjust: 100%;color: #7b7b7b;font-family: Helvetica;font-size: 15px=
+;line-height: 30px !important;text-align: left;margin-left: 5%;">Presentin=
+g has never been easier. Use AirParrot Remote to see the presenter view of=
+ your slides on your iPad while everyone else in the room sees the audienc=
+e view. Look like a pro without wires!</p>
+
+<p style=3D"margin: 1em 0;padding: 0;-ms-text-size-adjust: 100%;-webkit-te=
+xt-size-adjust: 100%;color: #7b7b7b;font-family: Helvetica;font-size: 15px=
+;line-height: 30px !important;text-align: left;margin-left: 5%;">Forgot yo=
+ur laptop in your office? No biggie. Pull out your phone=2C open AirParrot=
+ Remote and command your laptop to connect to the conference room&rsquo;s=
+ display. Check the live preview of your laptop screen and then begin mirr=
+oring! Use the built-in remote control options to pull up your presentatio=
+n=2C and then flip through slides with a quick tap of the screen.</p>
+
+<p style=3D"text-align: center;margin: 1em 0;padding: 0;-ms-text-size-adju=
+st: 100%;-webkit-text-size-adjust: 100%;color: #7b7b7b;font-family: Helvet=
+ica;font-size: 15px;line-height: 30px !important;margin-left: 5%;"><a href=
+=3D"http://airsquirrels.us6.list-manage.com/track/click?u=3D6be48fde72bb4e=
+c8df6198460&id=3D579d7062db&e=3Df33a9ad7b8" target=3D"_blank" style=3D"wo=
+rd-wrap: break-word;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 1=
+00%;color: #35CB3A;font-weight: normal;text-decoration: underline;">Learn=
+ how to use your iPad as a second screen while presenting.</a></p>
+</div>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09                =
+        </td>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09                =
+    </tr>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09                =
+                    </tbody></table>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09            </td>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09        </tr>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09    </tbody>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09</table></td>
+                                                    </tr>
+                                                </table>
+                                            </td>
+                                        </tr>
+                                    </table>
+
+                                    <table border=3D"0" cellpadding=3D"0"=
+ cellspacing=3D"0" width=3D"100%" id=3D"templateBodySub" style=3D"backgrou=
+nd: #f3f3f3;border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspa=
+ce: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
+                                        <tr>
+                                            <td align=3D"center" valign=3D=
+"top" style=3D"mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-a=
+djust: 100%;-webkit-text-size-adjust: 100%;">
+                                                <table border=3D"0" cellpa=
+dding=3D"0" cellspacing=3D"0" width=3D"640" class=3D"templateContainer" st=
+yle=3D"border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0=
+pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
+                                                    <tr>
+                                                        <td valign=3D"top"=
+ class=3D"bodySubContainer" style=3D"padding-top: 0px;padding-bottom: 10px=
+;background: #f3f3f3;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-=
+size-adjust: 100%;-webkit-text-size-adjust: 100%;"><table border=3D"0" cel=
+lpadding=3D"0" cellspacing=3D"0" width=3D"100%" class=3D"mcnTextBlock" sty=
+le=3D"border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0p=
+t;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09    <tbody class=
+=3D"mcnTextBlockOuter">
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09        <tr>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09            <td v=
+align=3D"top" class=3D"mcnTextBlockInner" style=3D"mso-table-lspace: 0pt;m=
+so-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust:=
+ 100%;">
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09                <=
+table align=3D"left" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" widt=
+h=3D"640" class=3D"mcnTextContentContainer" style=3D"border-collapse: coll=
+apse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100=
+%;-webkit-text-size-adjust: 100%;">
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09                =
+    <tbody><tr>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09                =
+        <td colspan=3D"2" valign=3D"top" class=3D"mcnTextContent fullConta=
+inerCopy" style=3D"mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-si=
+ze-adjust: 100%;-webkit-text-size-adjust: 100%;color: #7b7b7b;font-family:=
+ Helvetica;font-size: 15px;line-height: 150%;text-align: left;margin-left:=
+ 5%;">
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09                =
+        <div class=3D"copyp"><img src=3D"https://gallery.mailchimp.com/6be=
+48fde72bb4ec8df6198460/images/284f9fb2-6ffe-43f0-babb-289b91135e64.png" st=
+yle=3D"width: 90%;border: none;outline: none;text-decoration: none;-ms-int=
+erpolation-mode: bicubic;font-weight: bold;height: auto !important;line-he=
+ight: 100%;text-transform: capitalize;margin-left: 5%;">
+<p style=3D"margin: 1em 0;padding: 0;-ms-text-size-adjust: 100%;-webkit-te=
+xt-size-adjust: 100%;color: #7b7b7b;font-family: Helvetica;font-size: 15px=
+;line-height: 30px !important;text-align: left;margin-left: 5%;">Create a=
+ playlist of your favorite party jams=2C and control it from your phone.<b=
+r>
+AirParrot Remote allows you to line up an endless supply of music found on=
+ your computer to stream to your TV or AirPlay-enabled speakers.&nbsp;Add=
+ your tunes=2C and rock on!</p>
+
+<p style=3D"text-align: center;margin: 1em 0;padding: 0;-ms-text-size-adju=
+st: 100%;-webkit-text-size-adjust: 100%;color: #7b7b7b;font-family: Helvet=
+ica;font-size: 15px;line-height: 30px !important;margin-left: 5%;"><a href=
+=3D"http://airsquirrels.us6.list-manage.com/track/click?u=3D6be48fde72bb4e=
+c8df6198460&id=3Db953b413b5&e=3Df33a9ad7b8" target=3D"_blank" style=3D"wo=
+rd-wrap: break-word;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 1=
+00%;color: #35CB3A;font-weight: normal;text-decoration: underline;">Learn=
+ how to create party playlists with AirParrot Remote.</a></p>
+</div>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09                =
+        </td>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09                =
+    </tr>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09                =
+                    </tbody></table>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09            </td>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09        </tr>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09    </tbody>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09</table></td>
+                                                    </tr>
+                                                </table>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                    <table border=3D"0" cellpadding=3D"0"=
+ cellspacing=3D"0" width=3D"100%" id=3D"templateBodySub" style=3D"backgrou=
+nd: #fff;border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace:=
+ 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
+                                        <tr>
+                                            <td align=3D"center" valign=3D=
+"top" style=3D"mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-a=
+djust: 100%;-webkit-text-size-adjust: 100%;">
+                                                <table border=3D"0" cellpa=
+dding=3D"0" cellspacing=3D"0" width=3D"640" class=3D"templateContainer" st=
+yle=3D"border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0=
+pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
+                                                    <tr>
+                                                        <td valign=3D"top"=
+ class=3D"bodySubContainer" style=3D"padding-top: 0px;padding-bottom: 10px=
+;background: #fff !important;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-=
+ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;"><table border=
+=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"100%" class=3D"mcnText=
+Block" style=3D"border-collapse: collapse;mso-table-lspace: 0pt;mso-table-=
+rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09    <tbody class=
+=3D"mcnTextBlockOuter">
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09        <tr>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09            <td v=
+align=3D"top" class=3D"mcnTextBlockInner" style=3D"mso-table-lspace: 0pt;m=
+so-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust:=
+ 100%;">
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09                <=
+table align=3D"left" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" widt=
+h=3D"640" class=3D"mcnTextContentContainer" style=3D"border-collapse: coll=
+apse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100=
+%;-webkit-text-size-adjust: 100%;">
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09                =
+    <tbody><tr>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09                =
+        <td colspan=3D"2" valign=3D"top" class=3D"mcnTextContent fullConta=
+inerCopy" style=3D"mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-si=
+ze-adjust: 100%;-webkit-text-size-adjust: 100%;color: #7b7b7b;font-family:=
+ Helvetica;font-size: 15px;line-height: 150%;text-align: left;margin-left:=
+ 5%;">
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09                =
+        <div class=3D"copyp"><img src=3D"https://gallery.mailchimp.com/6be=
+48fde72bb4ec8df6198460/images/19d12ecf-c864-49bc-8375-08d7ed7f3872.png" st=
+yle=3D"width: 90%;border: none;outline: none;text-decoration: none;-ms-int=
+erpolation-mode: bicubic;font-weight: bold;height: auto !important;line-he=
+ight: 100%;text-transform: capitalize;margin-left: 5%;">
+<p style=3D"margin: 1em 0;padding: 0;-ms-text-size-adjust: 100%;-webkit-te=
+xt-size-adjust: 100%;color: #7b7b7b;font-family: Helvetica;font-size: 15px=
+;line-height: 30px !important;text-align: left;margin-left: 5%;">Your iPad=
+ isn&rsquo;t just for games. Set it up beside your computer monitor and us=
+e AirParrot Remote as a second screen! How=2C you ask? Once AirParrot Remo=
+te is paired to AirParrot 2=2C tap the Extend Desktop button on your iPad=
+ and then tap the desktop preview. Viola! Extended desktop on your iPad!</=
+p>
+
+<p style=3D"text-align: center;margin: 1em 0;padding: 0;-ms-text-size-adju=
+st: 100%;-webkit-text-size-adjust: 100%;color: #7b7b7b;font-family: Helvet=
+ica;font-size: 15px;line-height: 30px !important;margin-left: 5%;"><a href=
+=3D"http://airsquirrels.us6.list-manage.com/track/click?u=3D6be48fde72bb4e=
+c8df6198460&id=3D65ffd1caf4&e=3Df33a9ad7b8" target=3D"_blank" style=3D"wo=
+rd-wrap: break-word;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 1=
+00%;color: #35CB3A;font-weight: normal;text-decoration: underline;">Discov=
+er how to use your iPad as an extra screen for your computer.</a></p>
+</div>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09                =
+        </td>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09                =
+    </tr>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09                =
+                    </tbody></table>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09            </td>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09        </tr>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09    </tbody>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09</table></td>
+                                                    </tr>
+                                                </table>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                    <table border=3D"0" cellpadding=3D"0"=
+ cellspacing=3D"0" width=3D"100%" style=3D"background-color: #fff !importa=
+nt;border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-=
+ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
+                                        <tr align=3D"center">
+                                            <td align=3D"center" valign=3D=
+"top" style=3D"mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-a=
+djust: 100%;-webkit-text-size-adjust: 100%;">
+                                                <table border=3D"0" cellpa=
+dding=3D"0" cellspacing=3D"0" width=3D"100%" class=3D"templateContainer "=
+ style=3D"background-color: #727272 !important;padding: 0px;clear: both;bo=
+rder-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-te=
+xt-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
+                                                    <tr align=3D"center" s=
+tyle=3D"background: #727272">
+                                                        <td valign=3D"top"=
+ class=3D"mcnTextBlock" style=3D"padding-top: 0px;padding-bottom: 10px;mso=
+-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webki=
+t-text-size-adjust: 100%;">
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09    <table border=3D"0" cellp=
+adding=3D"0" cellspacing=3D"0" width=3D"100%" style=3D"border-collapse: co=
+llapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 1=
+00%;-webkit-text-size-adjust: 100%;">
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09    <tbody>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09        <tr align=3D"center">
+=09=09=09=09=09=09=09=09=09=09=09=09                        <td colspan=3D=
+"2" valign=3D"top" class=3D"mcnTextContent fullContainerCopy" style=3D"pad=
+ding-top: 30px;padding-right: 18px;padding-bottom: 15px;padding-left: 18px=
+;font-family: Arial;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-s=
+ize-adjust: 100%;-webkit-text-size-adjust: 100%;">
+=09=09=09=09=09=09=09=09=09=09=09=09                        <div class=3D"=
+copyp">&nbsp;
+<h3 style=3D"text-align: center;font-family: Arial !important;font-size: 1=
+4pt;color: #fff !important;margin: 0;padding: 0;display: block;font-style:=
+ normal;font-weight: bold;line-height: 125%;letter-spacing: -.5px;">AND MO=
+RE!</h3>
+
+<p style=3D"text-align: center;color: #fff;margin: 1em 0;padding: 0;-ms-te=
+xt-size-adjust: 100%;-webkit-text-size-adjust: 100%;line-height: 30px !imp=
+ortant;">Find more great ways to use AirParrot 2 and AirParrot Remote at o=
+ur blog and on our website!</p>
+
+<div style=3D"text-align: center;color: #fff; padding: 15px 0; display:blo=
+ck; clear:both; width: 50%; margin:0 auto;"><a class=3D"mobile-full button=
+" href=3D"http://airsquirrels.us6.list-manage.com/track/click?u=3D6be48fde=
+72bb4ec8df6198460&id=3Df6a1abff56&e=3Df33a9ad7b8" style=3D"display: block=
+;float: left;text-decoration: none;padding: 0.8em 0;width: 45%;background:=
+ #29c62c;color: #000;border-radius: 5px;word-wrap: break-word;-ms-text-siz=
+e-adjust: 100%;-webkit-text-size-adjust: 100%;" target=3D"_blank">Get It N=
+ow</a> <a class=3D"mobile-full button" href=3D"http://airsquirrels.us6.lis=
+t-manage.com/track/click?u=3D6be48fde72bb4ec8df6198460&id=3D217ef0b9d8&e=
+=3Df33a9ad7b8" style=3D"display: block;float: right;padding: 0.8em 0;text=
+-decoration: none;width: 45%;background: #29c62c;color: #000;border-radius=
+: 5px;word-wrap: break-word;-ms-text-size-adjust: 100%;-webkit-text-size-a=
+djust: 100%;" target=3D"_blank">Learn More</a></div>
+</div>
+=09=09=09=09=09=09=09=09=09=09=09=09                        </td>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09        </tr>=09=09=09=09=09=
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09    </tbody>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09</table>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09</td>
+                                                    </tr>
+                                                </table>
+                                            </td>
+                                        </tr>
+                                    </table>
+
+                                    <!-- // END BODY -->
+
+                                </td>
+                            </tr>
+                            <tr>
+                                <td align=3D"center" valign=3D"top" style=
+=3D"mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%=
+;-webkit-text-size-adjust: 100%;">
+                                    <!-- BEGIN FOOTER // -->
+=09                                    <table border=3D"0" cellpadding=3D"=
+0" cellspacing=3D"0" width=3D"100%" id=3D"templateFooter" style=3D"border-=
+collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-si=
+ze-adjust: 100%;-webkit-text-size-adjust: 100%;background-color: #404040;b=
+order-top: 0;border-bottom: 0;">
+=09                                        <tr align=3D"center" style=3D"m=
+argin: auto;">
+=09                                        =09<td valign=3D"top" class=3D"=
+footerContainer" style=3D"padding-top: 10px;padding-bottom: 10px;display:=
+ block;background: #404040;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms=
+-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;"><table border=3D"=
+0" cellpadding=3D"0" cellspacing=3D"0" width=3D"100%" class=3D"mcnTextBloc=
+k" style=3D"border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspa=
+ce: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
+=09=09                                        =09<center>
+=09=09=09=09=09=09=09=09=09=09=09=09=09<table border=3D"0" cellpadding=3D"=
+0" cellspacing=3D"0" width=3D"640" class=3D"mcnTextContentContainer" style=
+=3D"margin: auto !important;border-collapse: collapse;mso-table-lspace: 0p=
+t;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjus=
+t: 100%;">=09=09=09=09=09=09=09=09=09=09
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09<tr>
+=09=09=09=09=09=09=09=09=09                        <td valign=3D"top" clas=
+s=3D"mcnTextContent" style=3D"text-align: center;padding: 10px 0;mso-table=
+-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text=
+-size-adjust: 100%;color: #ffffff;font-family: Helvetica;font-size: 14px;l=
+ine-height: 125%;">
+=09=09=09=09=09=09=09=09=09                        <a href=3D"http://airsq=
+uirrels.us6.list-manage.com/track/click?u=3D6be48fde72bb4ec8df6198460&id=
+=3D56c1ddeefc&e=3Df33a9ad7b8" style=3D"word-wrap: break-word;-ms-text-siz=
+e-adjust: 100%;-webkit-text-size-adjust: 100%;color: #35CB3A;font-weight:=
+ normal;text-decoration: underline;"><img src=3D"https://gallery.mailchimp=
+=2Ecom/6be48fde72bb4ec8df6198460/images/51ffd78d-4b86-49e4-a6c5-3cdb6e11aabf=
+=2Ejpg" border=3D"0" width=3D"233" height=3D"41" align=3D"center" style=3D"t=
+ext-align: center;border: 0;outline: none;text-decoration: none;-ms-interp=
+olation-mode: bicubic;font-weight: bold;height: auto !important;line-heigh=
+t: 100%;text-transform: capitalize;"></a>
+=09=09=09=09=09=09=09=09=09                        </td>
+=09=09=09=09=09=09=09=09=09                    </tr>
+=09=09=09=09=09=09=09=09=09                    <tr>
+=09=09=09=09=09=09=09=09=09                        <td valign=3D"top" clas=
+s=3D"mcnTextContent" style=3D"padding-top: 9px;padding-right: 18px;padding=
+-bottom: 9px;padding-left: 18px;text-align: center;margin: auto;mso-table-=
+lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-=
+size-adjust: 100%;color: #ffffff;font-family: Helvetica;font-size: 14px;li=
+ne-height: 125%;">
+=09=09=09=09=09=09=09=09=09                        <div style=3D"margin:au=
+to; text-align: center; color: #fff"><em>Copyright &copy; 2016 Squirrels=
+=2C LLC=2C All rights reserved.</em><br>
+<br>
+You're receiving this email because you opted in on our website or purchas=
+ed one of our products. If you would like to unsubscribe from future email=
+s=2C please click the unsubscribe link below.<br>
+<br>
+<a class=3D"utilityLink" href=3D"http://airsquirrels.us6.list-manage.com/u=
+nsubscribe?u=3D6be48fde72bb4ec8df6198460&id=3De25a0b6c36&e=3Df33a9ad7b8&c=3D=
+f7a2c96256" style=3D"word-wrap: break-word;-ms-text-size-adjust: 100%;-web=
+kit-text-size-adjust: 100%;color: #35CB3A;font-weight: normal;text-decorat=
+ion: underline;">unsubscribe from this list</a>&nbsp;&nbsp;| &nbsp; <a cla=
+ss=3D"utilityLink" href=3D"http://airsquirrels.us6.list-manage.com/profile=
+?u=3D6be48fde72bb4ec8df6198460&id=3De25a0b6c36&e=3Df33a9ad7b8" style=3D"word=
+-wrap: break-word;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100=
+%;color: #35CB3A;font-weight: normal;text-decoration: underline;">update s=
+ubscription preferences</a>&nbsp;&nbsp;| &nbsp; <a href=3D"http://us6.camp=
+aign-archive1.com/?u=3D6be48fde72bb4ec8df6198460&id=3Df7a2c96256&e=3D=
+f33a9ad7b8" target=3D"_blank" style=3D"word-wrap: break-word;-ms-text-size-adjust=
+: 100%;-webkit-text-size-adjust: 100%;color: #35CB3A;font-weight: normal;t=
+ext-decoration: underline;">view email in your browser</a><br>
+&nbsp;</div>
+=09=09=09=09=09=09=09=09=09                        </td>
+=09=09=09=09=09=09=09=09=09                    </tr>
+=09=09=09=09=09=09=09=09=09=09=09=09=09</table>
+=09=09                                        =09</center>
+=09                                        =09</table></td>
+=09                                        </tr>
+=09                                    </table>
+                                    <!-- // END FOOTER -->
+=09                            </td>
+=09=09=09=09=09=09=09=09=09=09=09</tr>
+=09=09=09=09=09=09=09=09=09=09
+=09
+                        <!-- // END TEMPLATE -->
+=09=09
+
+
+
+
+    <img src=3D"http://airsquirrels.us6.list-manage.com/track/open.php?u=
+=3D6be48fde72bb4ec8df6198460&id=3Df7a2c96256&e=3Df33a9ad7b8" height=3D"1"=
+ width=3D"1"></body>
+</html>
+--_----------=_MCPart_2043944402--

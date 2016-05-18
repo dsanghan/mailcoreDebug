@@ -655,7 +655,7 @@
                     <window key="window" title="Window" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" visibleAtLaunch="NO" animationBehavior="default" id="IQv-IB-iLA">
                         <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
                         <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
-                        <rect key="contentRect" x="196" y="240" width="600" height="600"/>
+                        <rect key="contentRect" x="196" y="240" width="800" height="600"/>
                         <rect key="screenRect" x="0.0" y="0.0" width="1680" height="1027"/>
                     </window>
                     <connections>
@@ -671,20 +671,56 @@
             <objects>
                 <viewController id="XfG-lQ-9wD" customClass="ViewController" sceneMemberID="viewController">
                     <view key="view" wantsLayer="YES" id="m2S-Jp-Qdl">
-                        <rect key="frame" x="0.0" y="0.0" width="550" height="477"/>
+                        <rect key="frame" x="0.0" y="0.0" width="800" height="600"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <webView translatesAutoresizingMaskIntoConstraints="NO" id="y40-wN-LSI">
-                                <rect key="frame" x="10" y="10" width="530" height="457"/>
+                                <rect key="frame" x="10" y="10" width="780" height="530"/>
                                 <webPreferences key="preferences" defaultFontSize="16" defaultFixedFontSize="13" minimumFontSize="0" javaScriptCanOpenWindowsAutomatically="NO">
                                     <nil key="identifier"/>
                                 </webPreferences>
                             </webView>
+                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="GYz-AM-YJ0">
+                                <rect key="frame" x="10" y="566" width="74" height="19"/>
+                                <buttonCell key="cell" type="roundRect" title="Message 1" bezelStyle="roundedRect" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="9xn-SH-ugH">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="cellTitle"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="didPressMessageButton:" target="XfG-lQ-9wD" id="nad-qz-fDR"/>
+                                </connections>
+                            </button>
+                            <button verticalHuggingPriority="750" tag="1" translatesAutoresizingMaskIntoConstraints="NO" id="dIc-sY-suz">
+                                <rect key="frame" x="89" y="566" width="76" height="19"/>
+                                <buttonCell key="cell" type="roundRect" title="Message 2" bezelStyle="roundedRect" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="sXF-Ad-g1G">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="cellTitle"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="didPressMessageButton:" target="XfG-lQ-9wD" id="a2B-vi-XZ6"/>
+                                </connections>
+                            </button>
+                            <button verticalHuggingPriority="750" tag="2" translatesAutoresizingMaskIntoConstraints="NO" id="jx5-Wf-s7v">
+                                <rect key="frame" x="170" y="566" width="76" height="19"/>
+                                <buttonCell key="cell" type="roundRect" title="Message 3" bezelStyle="roundedRect" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="7CF-Rk-piI">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="cellTitle"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="didPressMessageButton:" target="XfG-lQ-9wD" id="4xd-YD-aaF"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <constraints>
-                            <constraint firstItem="y40-wN-LSI" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="10" id="IAw-6W-glt"/>
+                            <constraint firstItem="jx5-Wf-s7v" firstAttribute="leading" secondItem="dIc-sY-suz" secondAttribute="trailing" constant="5" id="0qQ-7c-LOB"/>
+                            <constraint firstItem="y40-wN-LSI" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="60" id="IAw-6W-glt"/>
+                            <constraint firstItem="jx5-Wf-s7v" firstAttribute="centerY" secondItem="dIc-sY-suz" secondAttribute="centerY" id="U0Y-5u-Pq5"/>
                             <constraint firstAttribute="bottom" secondItem="y40-wN-LSI" secondAttribute="bottom" constant="10" id="Y8T-PZ-Cl8"/>
+                            <constraint firstItem="GYz-AM-YJ0" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="10" id="eAs-kG-UTa"/>
+                            <constraint firstItem="GYz-AM-YJ0" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="15" id="fXd-o2-pjC"/>
+                            <constraint firstItem="dIc-sY-suz" firstAttribute="centerY" secondItem="GYz-AM-YJ0" secondAttribute="centerY" id="oPp-rN-gop"/>
                             <constraint firstItem="y40-wN-LSI" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="10" id="qGI-hO-743"/>
+                            <constraint firstItem="dIc-sY-suz" firstAttribute="leading" secondItem="GYz-AM-YJ0" secondAttribute="trailing" constant="5" id="whB-r1-baW"/>
                             <constraint firstAttribute="trailing" secondItem="y40-wN-LSI" secondAttribute="trailing" constant="10" id="x3B-fV-o2r"/>
                         </constraints>
                     </view>
@@ -694,7 +730,7 @@
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="110" y="758.5"/>
+            <point key="canvasLocation" x="75" y="1067"/>
         </scene>
     </scenes>
 </document>

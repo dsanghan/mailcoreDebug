@@ -8,8 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		59A2BCE82BC489ED67E1C0C3 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 64BE79B98F472D762E249F9B /* libPods.a */; };
-		D76713AF1CEC5C3F0063CC39 /* message.eml in Resources */ = {isa = PBXBuildFile; fileRef = D76713AE1CEC5C3F0063CC39 /* message.eml */; };
+		D76713AF1CEC5C3F0063CC39 /* message0.eml in Resources */ = {isa = PBXBuildFile; fileRef = D76713AE1CEC5C3F0063CC39 /* message0.eml */; };
 		D76713B11CEC5DE70063CC39 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D76713B01CEC5DE70063CC39 /* WebKit.framework */; };
+		D76713B81CEC5FE00063CC39 /* message2.eml in Resources */ = {isa = PBXBuildFile; fileRef = D76713B51CEC5FE00063CC39 /* message2.eml */; };
+		D76713BA1CEC60EA0063CC39 /* message1.eml in Resources */ = {isa = PBXBuildFile; fileRef = D76713B91CEC60EA0063CC39 /* message1.eml */; };
 		D7E2088D1CEC5AF500C10ECE /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D7E2088C1CEC5AF500C10ECE /* AppDelegate.m */; };
 		D7E208901CEC5AF500C10ECE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D7E2088F1CEC5AF500C10ECE /* main.m */; };
 		D7E208931CEC5AF500C10ECE /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D7E208921CEC5AF500C10ECE /* ViewController.m */; };
@@ -20,8 +22,10 @@
 /* Begin PBXFileReference section */
 		64BE79B98F472D762E249F9B /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		761629EA344A86E52D4B743F /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
-		D76713AE1CEC5C3F0063CC39 /* message.eml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = message.eml; sourceTree = "<group>"; };
+		D76713AE1CEC5C3F0063CC39 /* message0.eml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = message0.eml; sourceTree = "<group>"; };
 		D76713B01CEC5DE70063CC39 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
+		D76713B51CEC5FE00063CC39 /* message2.eml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = message2.eml; sourceTree = "<group>"; };
+		D76713B91CEC60EA0063CC39 /* message1.eml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = message1.eml; sourceTree = "<group>"; };
 		D7E208881CEC5AF500C10ECE /* MailCoreDebugger.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MailCoreDebugger.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D7E2088B1CEC5AF500C10ECE /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		D7E2088C1CEC5AF500C10ECE /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -56,6 +60,16 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		D76713B21CEC5FA50063CC39 /* EMLs */ = {
+			isa = PBXGroup;
+			children = (
+				D76713AE1CEC5C3F0063CC39 /* message0.eml */,
+				D76713B91CEC60EA0063CC39 /* message1.eml */,
+				D76713B51CEC5FE00063CC39 /* message2.eml */,
+			);
+			name = EMLs;
+			sourceTree = "<group>";
+		};
 		D7E2087F1CEC5AF500C10ECE = {
 			isa = PBXGroup;
 			children = (
@@ -77,7 +91,7 @@
 		D7E2088A1CEC5AF500C10ECE /* MailCoreDebugger */ = {
 			isa = PBXGroup;
 			children = (
-				D76713AE1CEC5C3F0063CC39 /* message.eml */,
+				D76713B21CEC5FA50063CC39 /* EMLs */,
 				D7E2088B1CEC5AF500C10ECE /* AppDelegate.h */,
 				D7E2088C1CEC5AF500C10ECE /* AppDelegate.m */,
 				D7E208911CEC5AF500C10ECE /* ViewController.h */,
@@ -167,9 +181,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D76713B81CEC5FE00063CC39 /* message2.eml in Resources */,
+				D76713BA1CEC60EA0063CC39 /* message1.eml in Resources */,
 				D7E208951CEC5AF500C10ECE /* Assets.xcassets in Resources */,
 				D7E208981CEC5AF500C10ECE /* Main.storyboard in Resources */,
-				D76713AF1CEC5C3F0063CC39 /* message.eml in Resources */,
+				D76713AF1CEC5C3F0063CC39 /* message0.eml in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
